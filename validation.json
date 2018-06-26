@@ -1,0 +1,13 @@
+[
+    {
+        "data": {
+            "validationCode": "38E6A44E-D469-42F3-BFEA-C07D5A64B4EE"
+        },
+        "dataVersion": "2",
+        "eventTime": "2018-06-21T01:47:25.5302773Z",
+        "eventType": "Microsoft.EventGrid.SubscriptionValidationEvent",
+        "id": "fa87f30a-2d27-4f30-92bc-3efc8e044605",
+        "metadataVersion": "1",
+        "subject": ""
+    }
+]

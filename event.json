@@ -1,0 +1,22 @@
+{
+    "eventType": "Microsoft.Storage.BlobCreated",
+    "eventTypeVersion": "",
+    "cloudEventsVersion": "0.1",
+    "source": "Microsoft.Storage/storageAccounts/exampleblob",
+    "eventID": "c1bcdde4-a01e-0001-1503-09b99c06ead0",
+    "eventTime": "2018-06-21T02:02:09.720915Z",
+    "data": {
+        "api": "PutBlob",
+        "clientRequestId": "1a4ec288-74f7-11e8-9070-6a0001790390",
+        "requestId": "c1bcdde4-a01e-0001-1503-09b99c000000",
+        "eTag": "0x8D5D71AFF6C4027",
+        "contentType": "text/plain",
+        "contentLength": 0,
+        "blobType": "BlockBlob",
+        "url": "https://example.blob.core.windows.net/examplecontainer/testfile.txt",
+        "sequencer": "00000000000000000000000000000E2B0000000003ce228a",
+        "storageDiagnostics": {
+            "batchId": "da0256ae-903b-4bca-842a-f169402e15bd"
+        }
+    }
+}
