@@ -31,6 +31,8 @@ type validationResponse struct {
 
 // debug
 var dryRun = flag.Bool("dry-run", false, "Debug, pull messages and do not send Dispatch events")
+var org = flag.String("org", "default", "organization of this event driver")
+var dispatchEndpoint = flag.String("dispatch-api-endpoint", "localhost:8080", "dispatch server host")
 var port = flag.Int("port", 80, "Port to listen on")
 var sharedSecret = flag.String("shared-secret", "", "A token or shared secret that the client should pass")
 
@@ -38,9 +40,10 @@ func getDriverClient() driverclient.Client {
 	if *dryRun {
 		return nil
 	}
-	client, err := driverclient.NewHTTPClient()
+	token := os.Getenv(driverclient.AuthToken)
+	client, err := driverclient.NewHTTPClient(driverclient.WithGateway(*dispatchEndpoint), driverclient.WithToken(token))
 	if err != nil {
-		panic(err)
+		log.Fatalf("Error when creating the events client: %s", err.Error())
 	}
 	log.Println("Event driver initialized.")
 	return client

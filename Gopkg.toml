@@ -27,4 +27,4 @@
 
 [[constraint]]
   name = "github.com/vmware/dispatch"
-  revision = "8ccce302fe817eab97f2926173ada776ec6f9b0c"
+  branch = "solo"

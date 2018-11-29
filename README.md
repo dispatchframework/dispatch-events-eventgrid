@@ -7,7 +7,7 @@ This driver enables native eventgrid/cloudevents support within Dispatch
 1. Register the eventgrid driver type (the expose option means this is a "push" driver):
 
     ```
-    $ dispatch create eventdrivertype eventgrid dispatchframework/events-eventgrid:0.0.1 --expose
+    $ dispatch create eventdrivertype eventgrid dispatchframework/dispatch-events-eventgrid:v0.0.1-solo --expose
     Created event driver type: eventgrid
     ```
 
